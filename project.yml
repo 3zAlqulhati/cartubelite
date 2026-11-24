@@ -1,0 +1,29 @@
+name: CarTubeLite
+options:
+  bundleIdPrefix: com.anjay
+  deploymentTarget:
+    iOS: "15.0"
+targets:
+  CarTubeLite:
+    type: application
+    platform: iOS
+    sources:
+      - path: CarTubeLite
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.anjay.cartubelite
+        INFOPLIST_FILE: CarTubeLite/Info.plist
+        TARGETED_DEVICE_FAMILY: "1"
+        CODE_SIGN_STYLE: Manual
+        CODE_SIGNING_ALLOWED: NO
+        CODE_SIGN_IDENTITY: ""
+        SWIFT_VERSION: "5.9"
+schemes:
+  CarTubeLite:
+    build:
+      targets:
+        CarTubeLite: all
+    run:
+      config: Debug
+    archive:
+      config: Release
